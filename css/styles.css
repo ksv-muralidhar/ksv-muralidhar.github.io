@@ -79,13 +79,13 @@
   
 }
 .cert-name{
-font-size: 150%;
-}
-
-.cert-issuer{
 font-size: 120%;
 }
 
+.cert-issuer{
+font-size: 100%;
+}
+
 .cert-year{
-font-size: 80%;
+font-size: 70%;
 }
