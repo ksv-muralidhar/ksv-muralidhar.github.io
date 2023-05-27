@@ -99,6 +99,7 @@ margin:0px;
 
 .tooltip .tooltiptext {
   visibility: hidden;
+  font-size: 80%;
   background-color: black;
   color: #fff;
   width: 200px;
