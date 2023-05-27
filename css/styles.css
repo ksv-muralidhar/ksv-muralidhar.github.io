@@ -99,13 +99,12 @@ margin:0px;
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
   background-color: black;
   color: #fff;
-  width: 220px;
+  width: 200px;
   bottom: 100%;
   left: 50%;
-  margin-left: -220px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  margin-left: -200px; /* Use half of the width (120/2 = 60), to center the tooltip */
   
   border-radius: 6px;
   padding: 5px 0;
