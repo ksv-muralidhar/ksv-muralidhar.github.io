@@ -191,7 +191,7 @@
                         <h3><b>Income Range Predictor</b></h3>
                         <p style="text-align: justify; text-justify: inter-word;">
                             Income range predictor app predicts if an individual's income is <=50k or >50k.
-			    The model is trained on dempgraphic data of individuals. Multiple machine learning models were tuned to find the best performing model.
+			    The model is trained on dempgraphic data of individuals. Multiple preprocessing methods and machine learning models were auto tuned using Hyperopt to find the best performing model.
 			    The ML model is served as an API developed using FastAPI. The front-end application makes an API call upon a user request.
 			    Both API and front-end application are dockerized and deployed as individual web services to render.com.
                         </p>
@@ -232,7 +232,7 @@
                         <p style="text-align: justify; text-justify: inter-word;">
                             News Article Classifier classifies a news article into sport, entertainment, politics, tech and business classes. 
 			    The model is trained on 1,500 BBC news articles. The data is augmented (using nlpaug) to increase the size of the dataset by 35X.
-			    The text is vectorized using Google Word2Vec. Multiple machine learning models were tuned to find the best performing model.
+			    The text is vectorized using Google Word2Vec and its dimension is reduced using PCA. Multiple machine learning models were auto tuned using Hyperopt to find the best performing model.
 			    The ML model is served as an API developed using FastAPI. The front-end application makes an API call upon a user request.
 			    Both API and front-end application are dockerized and deployed as individual web services to render.com.
                         </p>
