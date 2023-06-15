@@ -118,28 +118,3 @@ margin:0px;
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
-@import url('https://fonts.googleapis.com/css?family=Roboto:700');
-.animation {
-  height:60px;
-  overflow:hidden;
-  margin-left: 1rem;
-}
-.animation > div > div {
-  padding: 0.25rem 0.75rem;
-  height:1rem;
-  margin-bottom: 1rem;
-  display:inline-block;
-}
-.animation div:first-child {
-  animation: text-animation 6s infinite;
-}
-@keyframes text-animation {
-  0% {margin-top: 0;}
-  10% {margin-top: 0;}
-  20% {margin-top: -6.5rem;}
-  30% {margin-top: -6.5rem;}
-  40% {margin-top: -13.1rem;}
-  50% {margin-top: -13.1rem;}
-  60% {margin-top: -19.9rem;}
-  70% {margin-top: -19.9rem;}
-}
