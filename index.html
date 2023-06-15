@@ -523,10 +523,9 @@
                     <div class="project-info">
                         <h3><b>Find Similar News</b></h3>
                         <p style="text-align: justify; text-justify: inter-word;">
-                            This project finds news articles from a database that are similar to an input news article, using clustering and cosine similarity.
-			During training, the articles are converted into embeddings using SentenceTransformer, embeddings' dimensionality is reduced using PCA, 
-				clusters are assigned to news articles. Dusing inference, the news articles in the database belonging to the predicted cluster are filtered, 
-				cosine similarity between the input article and the articles in the database (filtered in step 5) is computed and 
+                            This project finds news articles from a database that are similar to an input news article, using clustering and cosine similarity. During training, the articles are converted into embeddings using SentenceTransformer, embeddings' dimensionality is reduced using PCA, 
+				clusters are assigned to news articles. During inference, the news articles in the database belonging to the predicted cluster are filtered, 
+				cosine similarity between the input article and the articles in the database (filtered earlier) is computed and 
 				the top 'n' similar articles with highest cosine similarity are returned.
                         </p>
 			    <div id="tools">
