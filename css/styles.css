@@ -121,14 +121,14 @@ margin:0px;
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:700');
 .animation {
-  height:60px;
+  height:45px;
   overflow:hidden;
   margin-left: 1rem;
 }
 .animation > div > div {
   padding: 0.25rem 0.75rem;
-  height:2.2rem;
-  margin-bottom: 2.2rem;
+  height:3.25rem;
+  margin-bottom: 3.25rem;
   display:inline-block;
 }
 .animation div:first-child {
@@ -139,8 +139,9 @@ margin:0px;
   10% {margin-top: 0;}
   20% {margin-top: -6.5rem;}
   30% {margin-top: -6.5rem;}
-  40% {margin-top: -13.1rem;}
-  50% {margin-top: -13.1rem;}
-  60% {margin-top: -19.9rem;}
-  70% {margin-top: -19.9rem;}
+  40% {margin-top: -13.4rem;}
+  50% {margin-top: -13.4rem;}
+  60% {margin-top: -20.2rem;}
+  70% {margin-top: -20.2rem;}
 }
+
