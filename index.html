@@ -23,6 +23,17 @@
 			}
         }
     </script>
+	
+	<script type="text/javascript">
+      (function () {
+        var words = ["Data Scientist","Azure 3X Certified","Kaggler","Blogger"],
+        i = 0;
+        setInterval(function(){ $('#words').fadeOut(function(){
+            $(this).html(words[(i = (i + 1) % words.length)]).fadeIn();
+          }); }, 1200)
+      })();
+    </script>
+	
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -89,7 +100,7 @@
         <div id="lead-content">
             <h1>KSV<br>Muralidhar</h1>
             
-	 <h2>Data Scientist</h2>
+	 <h2><span id="words">Data Scientist</span></h2>
 		
 			<div style="display: flex; justify-content: center;"><table><tr><td style="width: 35px;height: 60px">
                     
