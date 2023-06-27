@@ -10,6 +10,13 @@
 
   gtag('config', 'G-SV2FM6C3PY');
 </script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+<script>
+$(window).load(function(){
+     $('.loader').fadeOut();
+});
+</script>
 	<script type="text/javascript">
         function view_div(button, section){
 			if (document.getElementById(button).innerHTML == "View All"){
@@ -72,6 +79,7 @@
     }
 </style>
 <body>
+<div class="loader"></div>
     <div id="mobile-menu-open" class="shadow-large">
         <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
@@ -1173,8 +1181,8 @@
     </footer>
     <!-- End footer -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+    
+    
 </body>
 
 </html>
