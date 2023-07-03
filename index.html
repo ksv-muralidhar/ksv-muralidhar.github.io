@@ -443,7 +443,8 @@ $(window).load(function(){
                         <p style="text-align: justify; text-justify: inter-word;">
 			The project classifies Wikipedia articles into various categories. 
 			The model is trained by distributing the training process across 2 GPUs in Kaggle notebooks. 
-			The model is trained using TensorFlow and HuggingFace DistilBERT. 
+			The model is trained using TensorFlow and HuggingFace DistilBERT by freezing the DistilBERT layer and averaging the [CLS] token embeddings 
+				of the last four hidden layers and passing them to fully connected layers for classification. 
 			The TensorFlow/Keras model is converted to ONNX format which resulted in a model size reduction from 800 MB to 180 MB.
                         </p>
 			    <div id="tools">
