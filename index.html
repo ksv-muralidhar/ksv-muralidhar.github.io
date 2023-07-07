@@ -603,15 +603,18 @@ $(window).load(function(){
 				<!-- Start .project -->
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/lsp.png" width=250px height=280px style="border:1px solid silver;"/>
+                        <img src="images/lsp.png" width=250px height=300px style="border:1px solid silver;"/>
                     </div>
                     <!-- End .project-image -->
 					
                     <div class="project-info">
                         <h3><b>Linear Sequence Predictor</b></h3>
                         <p style="text-align: justify; text-justify: inter-word;">
-                            Linear Sequence Predictor trains a Batch Gradient Descent Regressor model on-the-fly using the input sequence. 
-			    It then predicts the next number in the sequence. The application is dockerized and deployed to render.com.  
+                            Linear Sequence Predictor trains a Batch Gradient Descent Regressor model (built from scratch) on-the-fly using the input sequence. The 
+				regressor is deliberately overfit to the training data until the training loss is > 0.009. Once the trainig loss is < 0.009, the next number is returned as a prediction.
+					If the number of epochs 
+					reaches 100,000 and traning loss is > 0.009, the training is aborted and a "cannot predict" message is returned. 
+					This happens when the input sequence is non-linear. The application is dockerized and deployed to render.com.  
                         </p>
 			    <div id="tools">
         			<ul style="font-size:10px;">
