@@ -48,6 +48,7 @@
     margin-bottom: 20px;
   }
   
+  
 }
 .bg-image {
   /* The image used */
@@ -56,6 +57,25 @@
   /* Add the blur effect */
   filter: blur(0px);
   -webkit-filter: blur(0px);
+  width: 100%;
+
+  
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.az-bg-image {
+  /* The image used */
+  
+
+  /* Add the blur effect */
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+  width: 62.5%;
+  
 
   
 
@@ -93,6 +113,183 @@ margin:5px;
 font-size: 80%;
 margin:0px;
 }
+
+
+@media screen and (max-width: 1220px) {
+.cert-name{
+font-size: 130%;
+margin:12px;
+}
+
+.cert-issuer{
+font-size: 90%;
+margin:5px;
+}
+
+.cert-year{
+font-size: 70%;
+margin:0px;
+
+}
+}
+@media screen and (max-width: 1048px) {
+.cert-name{
+font-size: 120%;
+margin:12px;
+}
+
+.cert-issuer{
+font-size: 80%;
+margin:5px;
+}
+
+.cert-year{
+font-size: 60%;
+margin:0px;
+
+}
+}
+
+@media screen and (max-width: 993px) {
+.cert-name{
+font-size: 105%;
+margin:12px;
+}
+
+.cert-issuer{
+font-size: 80%;
+margin:5px;
+}
+
+.cert-year{
+font-size: 60%;
+margin:0px;
+
+}
+}
+
+@media screen and (max-width: 914px) {
+.cert-name{
+font-size: 100%;
+margin:12px;
+}
+
+.cert-issuer{
+font-size: 80%;
+margin:5px;
+}
+
+.cert-year{
+font-size: 60%;
+margin:0px;
+
+}
+}
+@media screen and (max-width: 887px) {
+.cert-name{
+font-size: 90%;
+margin:12px;
+}
+
+.cert-issuer{
+font-size: 80%;
+margin:5px;
+}
+
+.cert-year{
+font-size: 60%;
+margin:0px;
+
+}
+}
+@media screen and (max-width: 834px) {
+.cert-name{
+font-size: 80%;
+margin:12px;
+}
+
+.cert-issuer{
+font-size: 70%;
+margin:5px;
+}
+
+.cert-year{
+font-size: 60%;
+margin:0px;
+
+}
+}
+
+@media screen and (max-width: 780px) {
+.cert-name{
+font-size: 70%;
+margin:12px;
+}
+
+.cert-issuer{
+font-size: 60%;
+margin:5px;
+}
+
+.cert-year{
+font-size: 60%;
+margin:0px;
+
+}
+}
+
+@media screen and (max-width: 725px) {
+.cert-name{
+font-size: 60%;
+margin:12px;
+}
+
+.cert-issuer{
+font-size: 50%;
+margin:5px;
+}
+
+.cert-year{
+font-size: 50%;
+margin:0px;
+
+}
+}
+
+@media screen and (max-width: 675px) {
+.cert-name{
+font-size: 47%;
+margin:12px;
+}
+
+.cert-issuer{
+font-size: 47%;
+margin:5px;
+}
+
+.cert-year{
+font-size: 47%;
+margin:0px;
+
+}
+}
+@media screen and (max-width: 600px) {
+.cert-name{
+font-size: 160%;
+margin:12px;
+}
+
+.cert-issuer{
+font-size: 110%;
+margin:5px;
+}
+
+.cert-year{
+font-size: 80%;
+margin:0px;
+}
+}
+
 .tooltip {
   position: relative;
   display: inline-block;
