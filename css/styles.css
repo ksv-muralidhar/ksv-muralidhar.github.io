@@ -326,3 +326,22 @@ margin:0px;
 	z-index: 99999999;
 	background: url('../images/loader.gif') 50% 50% no-repeat rgb(255,255,255);
 }
+
+.float{
+	position:fixed;
+	width:40px;
+	height:40px;
+	bottom:40px;
+	right:40px;
+	background-color:black;
+	border-radius:50px;
+	text-align:center;
+	vertical-align:center;
+	z-index: 99999999;
+	font-size:0;
+	
+}
+
+.my-float{
+	margin-top:22px;
+}
