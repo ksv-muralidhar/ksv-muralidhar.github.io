@@ -340,9 +340,14 @@ margin:0px;
 	z-index: 99999999;
 	font-size:0;
 	cursor:pointer;
+	animation: beat 0.8s infinite alternate;
 	
 }
 
 .my-float{
 	margin-top:22px;
+}
+
+@keyframes beat{
+	to { transform: scale(1.2); }
 }
