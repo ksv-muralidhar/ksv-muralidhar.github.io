@@ -337,7 +337,7 @@ margin:0px;
 	border-radius:50px;
 	text-align:center;
 	vertical-align:center;
-	z-index: 99999999;
+	z-index: 99999998;
 	font-size:0;
 	cursor:pointer;
 	animation: beatan 0.8s infinite alternate;
