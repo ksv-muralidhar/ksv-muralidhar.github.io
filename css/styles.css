@@ -340,7 +340,7 @@ margin:0px;
 	z-index: 99999999;
 	font-size:0;
 	cursor:pointer;
-	animation: beat 0.8s infinite alternate;
+	animation: beatan 0.8s infinite alternate;
 	
 }
 
@@ -348,6 +348,6 @@ margin:0px;
 	margin-top:22px;
 }
 
-@keyframes beat{
-	to { transform: scale(1.2); }
+@keyframes beatan{
+	to { transform: scale(1.3); }
 }
