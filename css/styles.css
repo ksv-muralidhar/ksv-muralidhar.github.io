@@ -349,5 +349,20 @@ margin:0px;
 }
 
 @keyframes beatan{
-	to { transform: scale(1.2); }
+	to { transform: scale(1.14); }
+}
+
+.float-to-top{
+	position:fixed;
+	width:30px;
+	height:30px;
+	bottom:57px;
+	right:15px;
+	background-color:white;
+	border-radius:50px;
+	text-align:center;
+	vertical-align:center;
+	z-index: 99999998;
+	cursor:pointer;
+	animation: beatan 0.8s infinite alternate;
 }
