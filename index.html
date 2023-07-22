@@ -261,7 +261,7 @@ $(window).load(function(){
 				<!-- Start .project -->
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/income.png" alt="Income Range Predictor" width=250px height=800px style="border:1px solid silver;"/>
+                        <img id="income-img" src="images/income.png" alt="Income Range Predictor" width=250px height=480px style="border:1px solid silver;"/>
                     </div>
                     <!-- End .project-image -->
 					
@@ -275,7 +275,8 @@ $(window).load(function(){
 			preprocessing steps are tuned using Hyperopt while training.
 			<br>* New features are constructed as part of feature construction step.
 			<br>* Data is clustered and clusters are added as features to data. Best 'k' is found using silhouette score.
-			<br>* Best features are selected using model-based feature selection. Best 'k' is tuned while training.
+			<span id="read-more-income" style="display: none;">
+			* Best features are selected using model-based feature selection. Best 'k' is tuned while training.
 			<br>* Since, data is imbalanced, best technique among cost-sensitive learning and SMOTE is chosen automatically while training.
 			<br>* Best model among Logistic Regression, AdaBoost, XGBoost, Random Forest, etc. and best threshold are automatically chosen while training.
 			<br>* The hyperparameters and the evaluation metrics are logged to database using MLFlow Tracking.
@@ -285,6 +286,7 @@ $(window).load(function(){
 			<br>* Training can be done in cold start mode (training from scratch on new data) and warm start mode (refitting an existing best model to new data).
 			<br>* The model is served using an API developed using FastAPI.
 			<br>* The project incorporates CI/CD pipeline that runs multiple unit tests and dockerizes the project and pushes it to Docker Hub and deployed as web service to render.com. 
+			</span><p><a class="a-read-more" onclick="read_more('read_more_button_income', 'read-more-income', 'income-img', 250, 480, 250, 830)" id="read_more_button_income">Read more</a></p>
                         </p>
 				<div id="tools">
         			<ul style="font-size:10px;">
