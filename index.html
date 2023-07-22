@@ -261,17 +261,30 @@ $(window).load(function(){
 				<!-- Start .project -->
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/income.png" alt="Income Range Predictor" width=250px height=360px />
+                        <img src="images/income.png" alt="Income Range Predictor" width=250px height=780px />
                     </div>
                     <!-- End .project-image -->
 					
                     <div class="project-info">
                         <h3><b>Income Range Predictor</b></h3>
                         <p style="text-align: justify; text-justify: inter-word;">
-                            Income range predictor app predicts if an individual's income is <=50k or >50k.
-			    The model is trained on dempgraphic data of individuals. Multiple preprocessing methods and machine learning models were auto tuned using Hyperopt to find the best performing model.
-			    The ML model is served as an API developed using FastAPI. The front-end application makes an API call upon a user request.
-			    Both API and front-end application are dockerized and deployed as individual web services to render.com.
+                        Income range predictor app predicts if an individual's income is <=50k or >50k. The components of the training pipeline are as follows:
+			<br>* Data is ingested from a database, validated and cleaned.
+			<br>* Data is preprocessed by removing id variables, variables with low variance, 
+			winsorizing outliers, imputing missing values, removing correlated features, marking rare categories, one-hot encoding, ordinal encoding and scaling. The hyperparameters of 
+			preprocessing steps are tuned using Hyperopt while training.
+			<br>* New features are constructed as part of feature construction step.
+			<br>* Data is clustered and clusters are added as features to data. Best 'k' is found using silhouette score.
+			<br>* Best features are selected using model-based feature selection. Best 'k' is tuned while training.
+			<br>* Since, data is imbalanced, best technique among cost-sensitive learning and SMOTE is chosen automatically while training.
+			<br>* Best model among Logistic Regression, AdaBoost, XGBoost, Random Forest, etc. and best threshold are automatically chosen while training.
+			<br>* The hyperparameters and the evaluation metrics are logged to database using MLFlow Tracking.
+			<br>* The best model is evaluated on test set and the results along with feature importance are logged using MLFlow Tracking.
+			<br>* Both the model and MLFlow experiments can be versioned using timestamps.
+			<br>* Central logging to MongoDB Atlas database is enabled to track the training process.
+			<br>* Training can be done in cold start mode (training from scratch on new data) and warm start mode (refitting an existing best model to new data).
+			<br>* The model is served using an API developed using FastAPI.
+			<br>* The project incorporates CI/CD pipeline that runs multiple unit tests and dockerizes the project and pushes it to Docker Hub and deployed as web service to render.com. 
                         </p>
 				<div id="tools">
         			<ul style="font-size:10px;">
