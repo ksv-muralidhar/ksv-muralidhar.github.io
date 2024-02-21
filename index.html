@@ -451,8 +451,8 @@ $(window).load(function(){
                     <div class="project-info">
                         <h3><b>News Aggregator</b></h3>
                         <p style="text-align: justify; text-justify: inter-word;">
-                            News aggregator aggregates the news from a few selected RSS news feeds. There is a backend process that extracts the data from 
-			    RSS feeds, transforms it and loads it into MongoDB Atlas (MongoDB-as-a-service). 
+                            News aggregator aggregates the news from a few selected RSS news feeds. There is a backend process that extracts the news data from 
+			    RSS feeds in parallel using multiprocessing, transforms it and loads it into MongoDB Atlas (MongoDB-as-a-service). 
 			    The backend application is triggered preiodically by a CRON job. The front end process reads the data from MongoDB Atlas and renders it 
 			    in HTML when a user invokes it.
                         </p>
@@ -461,6 +461,7 @@ $(window).load(function(){
             				<li>Python</li>
 					<li>Pandas</li>
 					<li>BeautifulSoup</li>
+					<li>Multiprocessing</li>
 					<li>ETL</li>
 					<li>Cron Job</li>
 					<li>MongoDB</li>
