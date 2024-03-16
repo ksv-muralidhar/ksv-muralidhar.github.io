@@ -278,7 +278,7 @@ $(window).load(function(){
 			The news items are processed and the categories of the news items are 
 			predicted using DistilBERT model that is 
 			<a href="https://huggingface.co/spaces/ksvmuralidhar/news-headline-classification/tree/main" target="_blank">fine-tuned</a> (full fine-tuning) on 
-			news article headline classification task, the model is then quantized using TFLite. Top 5 similar news articles are identified from Milvus vector database using cosine similarity. 
+			news article headline classification task, the model is then quantized using TFLite. <a href="https://huggingface.co/spaces/ksvmuralidhar/similar-news-sentence-transformer1/tree/main" target="_blank">Top 5 similar news articles</a> are identified from Milvus vector database using cosine similarity. 
 			The similar articles are then reranked using cross encoders. The transformed data is loaded into MongoDB Atlas (MongoDB-as-a-service).<br><br>
 			The backend services are periodically triggered using a CRON job scheduled using GitHub Actions. 
 			The front end service reads the data from MongoDB Atlas and renders it in HTML when a user invokes it.
