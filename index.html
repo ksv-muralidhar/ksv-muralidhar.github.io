@@ -419,11 +419,14 @@ $(window).load(function(){
                     <div class="project-info">
                         <h3><b>News Aggregator</b></h3>
                         <p style="text-align: justify; text-justify: inter-word;">
-                            News aggregator is an AI-powered app that aggregates news from a few selected RSS news feeds. The details of the backend services are given below:
-			    <ul>
-				    <li><b>ETL service: </b>Extracts news from a list of RSS feeds in parallel using multiprocessing. The feed data is processed and the category of the news article is 
-				    predicted using DistilBERT model that is <a href="https://huggingface.co/spaces/ksvmuralidhar/news-headline-classification/tree/main" target="_blank">fine-tuned</a> on news article headline classification task, the model is then quantized using TFLite. </li>
-			    </ul>There is a prediction backend servi that extracts the news data from 
+                            News aggregator is an AI-powered app that aggregates news from a few selected RSS news feeds. The details of the backend services are given below:<br>
+			<b>* Indexing service: </b>Extracts news items from a list of RSS feeds, computes the sentence embeddings using sentence transformers and stores the embeddings in Milvus vector database.<br>
+			<b>* ETL service: </b>Extracts news items from a list of RSS feeds in parallel using multiprocessing. 
+			The news items are processed and the categories of the news items are 
+			predicted using DistilBERT model that is 
+			<a href="https://huggingface.co/spaces/ksvmuralidhar/news-headline-classification/tree/main" target="_blank">fine-tuned</a> (full fine-tuning) on 
+			news article headline classification task, the model is then quantized using TFLite. Similar news articles are identified by  
+			    There is a prediction backend servi that extracts the news data from 
 			    RSS feeds in parallel using multiprocessing, transforms it and loads it into MongoDB Atlas (MongoDB-as-a-service). 
 			    The backend application is triggered preiodically by a CRON job. The front end process reads the data from MongoDB Atlas and renders it 
 			    in HTML when a user invokes it.
