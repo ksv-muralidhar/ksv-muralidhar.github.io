@@ -264,7 +264,7 @@ $(window).load(function(){
 		    <!-- Start .project -->
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/news_agg.jpg" alt="News Aggregator" width=250px height=680px/>
+                        <img src="images/news_agg.jpg" alt="News Aggregator" width=250px height=700px/>
                     </div>
                     <!-- End .project-image -->
 					
@@ -273,13 +273,14 @@ $(window).load(function(){
                         <p style="text-align: justify; text-justify: inter-word;">
                             News aggregator is an AI-powered app that aggregates news from a few selected RSS news feeds. The details of the backend services are given below:<br>
 			<b>- News indexing service: </b>Extracts news items from a list of RSS feeds, computes the sentence embeddings using sentence transformers and stores the embeddings in Milvus vector database.<br>
-			<b>- Delete embedding service: </b>Articles and their embeddings older than a month are deleted from Milvus vector database.<br>
+			<b>- Embedding deletion service: </b>Articles and their embeddings older than a month are deleted from Milvus vector database.<br>
 			<b>- ETL service: </b>Extracts news items from a list of RSS feeds in parallel using multiprocessing. 
 			The news items are processed and the categories of the news items are 
 			predicted using DistilBERT model that is 
 			<a href="https://huggingface.co/spaces/ksvmuralidhar/news-headline-classification/tree/main" target="_blank">fine-tuned</a> (full fine-tuning) on 
 			news article headline classification task, the model is then quantized using TFLite. <a href="https://huggingface.co/spaces/ksvmuralidhar/similar-news-sentence-transformer1/tree/main" target="_blank">Top 5 similar news articles</a> are identified from Milvus vector database using cosine similarity. 
-			The similar articles are then reranked using cross encoders. The transformed data is loaded into MongoDB Atlas (MongoDB-as-a-service).<br><br>
+			The similar articles are then reranked using cross encoders. News articles are summarized using 
+			<a href="https://huggingface.co/spaces/ksvmuralidhar/news_summarizer_ner" target="_blank">BART model</a> that is fine-tuned on CNN and Daily Mail news articles. The transformed data is loaded into MongoDB Atlas (MongoDB-as-a-service).<br><br>
 			The backend services are periodically triggered using a CRON job scheduled using GitHub Actions. 
 			The front end service reads the data from MongoDB Atlas and renders it in HTML when a user invokes it.
                         </p>
