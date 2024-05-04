@@ -272,7 +272,7 @@ $(window).load(function(){
                         <h3><b>News Aggregator</b></h3>
                         <p style="text-align: justify; text-justify: inter-word;">
                             News aggregator is an AI-powered app that aggregates news from a few selected RSS news feeds. The details of the backend services are given below:<br>
-			<b>- News indexing service: </b>Extracts news items from a list of RSS feeds, computes the sentence embeddings using sentence transformers and stores the embeddings in Milvus vector database.<br>
+			<b>- News indexing service: </b>Extracts news items from a list of RSS feeds, computes the sentence embeddings using sentence transformers and stores the embeddings in Milvus vector database for content-based recommendations using semantic search.<br>
 			<b>- Embedding deletion service: </b>Articles and their embeddings older than a month are deleted from Milvus vector database.<br>
 			<b>- ETL service: </b>Extracts news items from a list of RSS feeds in parallel using multiprocessing. 
 			The news items are processed and the categories of the news items are 
